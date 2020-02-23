@@ -1,24 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Collapsible from "./Collapsible";
+import {FormControl, InputGroup} from "react-bootstrap";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1>Expandible example</h1>
+        <Collapsible title="Filter">
+            <div className="input-filters">
+                <InputGroup className="mb-3">
+                    <InputGroup.Prepend>
+                        <InputGroup.Text>First name</InputGroup.Text>
+                    </InputGroup.Prepend>
+                    <FormControl />
+                </InputGroup>
+                <InputGroup className="mb-3">
+                    <InputGroup.Prepend>
+                        <InputGroup.Text>Last name</InputGroup.Text>
+                    </InputGroup.Prepend>
+                    <FormControl />
+                </InputGroup>
+                <InputGroup className="mb-3">
+                    <InputGroup.Prepend>
+                        <InputGroup.Text>Email name</InputGroup.Text>
+                    </InputGroup.Prepend>
+                    <FormControl />
+                </InputGroup>
+                <InputGroup className="mb-3">
+                    <InputGroup.Prepend>
+                        <InputGroup.Text>Other name</InputGroup.Text>
+                    </InputGroup.Prepend>
+                    <FormControl />
+                </InputGroup>
+            </div>
+        </Collapsible>
     </div>
   );
 }
